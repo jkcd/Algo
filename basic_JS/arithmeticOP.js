@@ -7,7 +7,7 @@
  * find and print the meal's total cost.
  *
  * Input Format
- * There are  lines of numeric input:
+ * There are 3 lines of numeric input:
  * The first line has a double,  (the cost of the meal before tax and tip). ex: 13.00
  * The second line has an integer,  (the percentage of  being added as tip). ex: 10
  * The third line has an integer,  (the percentage of  being added as tax). ex: 5
@@ -21,7 +21,7 @@ var rawInput = '';
 var inputLinesArray;
 
 var price = 0.0;
-var percent = 0;
+var tip = 0;
 var tax = 0.0;
 
 process.stdin.resume();
@@ -40,15 +40,18 @@ process.stdin.on('end', function(){
 
 function main(){
     price = parseFloat(inputLinesArray[0]);
-    percent = parseFloat(inputLinesArray[1]);
+    tip = parseFloat(inputLinesArray[1]);
     tax = parseFloat(inputLinesArray[2]);
     //console.log('price:' + price +' percent:' + percent + ' tax:' + tax);
 
-    percent = (price * percent/100);
+    tip = (price * tip/100);
     tax  = (price * tax/100);
-    price = Math.round(price + percent + tax);
+    price = Math.round(price + tip + tax);
 
+    console.log('tip: ' + tip);
+    console.log('tax: '+ tax);
     console.log('total cost is: '+ price);
+
 }
 
 
