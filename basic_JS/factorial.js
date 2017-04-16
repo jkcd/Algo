@@ -28,7 +28,7 @@ process.stdin.on('end', function(){
     inputNo = parseInt(rawInput[0]);
     main();
 
-})
+});
 
 function main(){
     var outputNo = 0;
