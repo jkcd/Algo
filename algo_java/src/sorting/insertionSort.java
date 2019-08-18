@@ -6,7 +6,7 @@ import java.util.Arrays;
  * In insertion sort, you take an element and insert it 
  * into the right position
  */
-
+   
 public class insertionSort {
 	
 	static int[] data = {22, 11, 99, 88, 9, 7, 42};
